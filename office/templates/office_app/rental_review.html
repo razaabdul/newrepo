@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block head%}
+
+<link rel="stylesheet" href="{%static 'office/custom.css'%}">
+{%endblock%}
+{%block body%}
+
+<h1>rental review</h1>
+<form action="" method="post">
+{%csrf_token%}
+<div class="container">
+    {%for field in form%}
+<div class="container">{{field.label_tag}}{{field}}</div>{{field.errors}}
+{%endfor%}
+<input type="submit">
+</form>
+{%endblock%}

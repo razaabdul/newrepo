@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  {%if user.is_authenticated%}
+  <h1>welcome : {{user.get_username}} </h1><a href="{% url 'logout'%}?next={{request.path}}">click to logout </a>
+  <p>you are logged In </p>
+  Num of books : {{num_book}}
+  AVAILABLE : {{num_instance_avail}}
+  {%else%}
+  <p>you are loggged out</p><a href="{%url 'login'%}?next={{request.path}}">click to login</a>
+  Num of books : {{num_book}}
+  AVAILABLE : {{num_instance_avail}}
+  
+  
+  {%endif%}
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}   
+{% load static %}
+    {% block body%}
+    {% comment %} <h1>hello there</h5>
+        <h2>{{name|lower|capfirst}}</h2>
+        <h2>{{city.0}}</h2>
+    {%if user_logged_in%}
+    <h1>welcom you are loggedin</h1>
+    {%endif%} {% endcomment %}
+    <p><a href="{%url 'my_app:variables'%}">click me </a></p>
+    <img src="{% static 'first_app/django-logo-negative.png' %}">
+{%endblock body%}

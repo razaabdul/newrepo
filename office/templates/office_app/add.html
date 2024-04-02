@@ -1,0 +1,14 @@
+{%extends 'base.html' %}
+{%block body%}
+<form method='post'>
+{% csrf_token %}
+<div class="container">
+brand<input type="text" id='brand' name='brand' >
+year<input type="text" id='year' name='year' >
+<input type="submit" >
+</div>
+
+
+
+</form>
+{%endblock%}
